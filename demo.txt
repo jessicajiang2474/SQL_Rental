@@ -1,0 +1,225 @@
+csc343h-onchris=> \i runner.txt
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:18: NOTICE:  drop cascades to 44 other objects
+DETAIL:  drop cascades to table vacationschema.guest
+drop cascades to table vacationschema.property
+drop cascades to type vacationschema.walk
+drop cascades to type vacationschema.transit
+drop cascades to table vacationschema.city
+drop cascades to table vacationschema.water
+drop cascades to table vacationschema.saturdaytoweek
+drop cascades to table vacationschema.price
+drop cascades to table vacationschema.creditcard
+drop cascades to table vacationschema.rentforrenter
+drop cascades to table vacationschema.rentforallguests
+drop cascades to table vacationschema.host
+drop cascades to type vacationschema.score
+drop cascades to table vacationschema.propertyrating
+drop cascades to table vacationschema.comment
+drop cascades to table vacationschema.hostrating
+drop cascades to table vacationschema.q1
+drop cascades to view vacationschema.propertyluxury
+drop cascades to table vacationschema.q2
+drop cascades to view vacationschema.capacity
+drop cascades to view vacationschema.numcapa
+drop cascades to view vacationschema.avgcaparatig
+drop cascades to view vacationschema.lower
+drop cascades to view vacationschema.capa
+drop cascades to view vacationschema.numlower
+drop cascades to view vacationschema.avglowerratig
+drop cascades to view vacationschema.below
+drop cascades to view vacationschema.answer2
+drop cascades to table vacationschema.q3
+drop cascades to view vacationschema.avgrating
+drop cascades to view vacationschema.highesthost
+drop cascades to view vacationschema.mostexpensiveweek
+drop cascades to view vacationschema.answer3
+drop cascades to table vacationschema.q4
+drop cascades to view vacationschema.extraguest
+drop cascades to view vacationschema.waterguest
+drop cascades to view vacationschema.cityguest
+drop cascades to view vacationschema.otherproperty
+drop cascades to view vacationschema.otherguest
+drop cascades to view vacationschema.answer4
+drop cascades to table vacationschema.q5
+drop cascades to view vacationschema.extremprice
+drop cascades to view vacationschema.maxrange
+drop cascades to view vacationschema.highestrange
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE DOMAIN
+CREATE DOMAIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE DOMAIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 6
+INSERT 0 6
+INSERT 0 1
+INSERT 0 1
+INSERT 0 3
+INSERT 0 6
+INSERT 0 5
+INSERT 0 5
+INSERT 0 12
+INSERT 0 3
+INSERT 0 9
+INSERT 0 3
+INSERT 0 5
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:5: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:15: NOTICE:  view "propertyluxury" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 6
+        luxueryoffer        | numofproperty 
+----------------------------+---------------
+ properties with sauna      |             2
+ properties with breakfast  |             1
+ properties with laundry    |             2
+ properties with concierge  |             2
+ properties with dailyclean |             3
+ properties with hottub     |             4
+(6 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+psql:q2.sql:4: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q2.sql:13: NOTICE:  view "capacity" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:23: NOTICE:  view "numcapa" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:31: NOTICE:  view "avgcaparating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:41: NOTICE:  view "lower" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:49: NOTICE:  view "capa" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:56: NOTICE:  view "numlower" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:63: NOTICE:  view "avglowerrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:71: NOTICE:  view "below" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:78: NOTICE:  view "answer2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 2
+ whether_at_capacity | total_number |  average_rating  
+---------------------+--------------+------------------
+ At Capacity         |            3 | 3.83333333333333
+ Below Capacity      |            2 | 1.66666666666667
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+psql:q3.sql:2: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q3.sql:14: NOTICE:  view "avgrating" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:24: NOTICE:  view "highesthost" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:32: NOTICE:  view "mostexpensiveweek" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q3.sql:41: NOTICE:  view "answer3" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+ host_id |     email     | highest_avg_rating | most_expensive_week 
+---------+---------------+--------------------+---------------------
+       3 | han@gmail.com |   4.33333333333333 |                1220
+(1 row)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:2: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:12: NOTICE:  view "extraguest" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:26: NOTICE:  view "waterguest" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:35: NOTICE:  view "cityguest" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:44: NOTICE:  view "otherproperty" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:54: NOTICE:  view "otherguest" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q4.sql:62: NOTICE:  view "answer4" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 3
+ property_type | avg_extra_guests 
+---------------+------------------
+ other         |              1.5
+ city          |                2
+ water         |                1
+(3 rows)
+
+
+-------------------- Query 5: -----------------------------------
+
+SET
+psql:q5.sql:2: NOTICE:  table "q5" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q5.sql:12: NOTICE:  view "extremprice" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q5.sql:22: NOTICE:  view "maxrange" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q5.sql:30: NOTICE:  view "highestrange" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 3
+ property_id | min_price | max_price | price_range | max_range 
+-------------+-----------+-----------+-------------+-----------
+           3 |       750 |       750 |           0 |  
+           5 |      1000 |      1220 |         220 | *
+           2 |       580 |       600 |          20 |  
+(3 rows)
+
+csc343h-onchris=> 
