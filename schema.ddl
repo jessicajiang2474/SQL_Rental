@@ -1,19 +1,3 @@
--- 1. What constraints from the domain could not be enforced, if any?
-
--- Renters must be age >= 18 could not be enforced in our domain.
-
-
--- 2. What constraints that could have been enforced were not enforced, if any? Why not?
-
--- We were unable to enforce the age requirement for renters because in doing so would 
--- result in possible redundancy occurence. If we chose to enforce this constraint, from our
--- current schema, we would require at least one new relation for all guests over 18, and 
--- only these guests in this relation would be a valid renter; however, we would then require
--- these guests over 18 as well as the guests under 18 to resemble some sort of connection
--- either from a master relation with all guests, or replicate guests and create one new relation
--- for guests over 18. Therefore, we concluded that the trade-off of possible anomalies from redundant 
--- data versus not enforcing the constraint is not the best option especially if the dataset is very large.
-
 
 drop schema if exists vacationschema cascade; 
 create schema vacationschema;
