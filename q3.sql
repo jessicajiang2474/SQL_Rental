@@ -1,8 +1,6 @@
 SET SEARCH_PATH TO vacationschema;
 drop table if exists q3 cascade;
 
-
-
 create table q3(
   host_id INTEGER,
   email varchar ,
@@ -18,7 +16,6 @@ CREATE VIEW AvgRating AS
   FROM HostRating hr,RentForRenter rr,Property pp,Host ht
   WHERE hr.rental_id = rr.rental_id AND rr.property_id = pp.property_id AND pp.host_id = ht.host_id
   GROUP BY ht.host_id;
-
 
 
 DROP VIEW IF EXISTS HighestHost CASCADE;
@@ -44,7 +41,6 @@ CREATE VIEW Answer3 AS
   SELECT hh.host_id as host_id,hh.email as email,highest_avg_rating, most_expensive_week
   FROM highestHost hh, mostExpensiveWeek mx
   WHERE hh.host_id = mx.host_id;
-
 
 insert into q3
   SELECT *
